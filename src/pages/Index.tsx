@@ -1,7 +1,8 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio, Award, UserCheck, Calendar, Wifi, Home, MonitorX, BatteryWarning } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio, Award, UserCheck, Calendar, Wifi, Home, MonitorX, BatteryWarning, HelpCircle, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import heroTechnician from "@/assets/hero-technician-clean.png";
 import ledTvRepair from "@/assets/led-tv-repair.webp";
@@ -20,14 +21,14 @@ import noPictureRepair from "@/assets/no-picture-repair.jpg";
 import powerSupplyRepair from "@/assets/power-supply-repair.jpg";
 import wifiIssues from "@/assets/wifi-issues.jpg";
 import homeOfficeService from "@/assets/home-office-service.jpg";
+import logoGenerated from "@/assets/logo-generated.png";
 const Index = () => {
   return <main className="min-h-screen bg-background font-body">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Tv className="w-8 h-8 text-primary" />
-            <span className="font-heading text-lg md:text-xl font-bold text-foreground">Vizag TV Repair Expert</span>
+            <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-10 md:h-12 w-auto" />
           </div>
           
           {/* Desktop Menu */}
@@ -454,6 +455,9 @@ const Index = () => {
           }, {
             text: "Customer-focused support",
             icon: Headphones
+          }, {
+            text: "Experienced & skilled technicians",
+            icon: ThumbsUp
           }].map(item => <div key={item.text} className="flex items-center gap-3 p-4">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-5 h-5 text-primary" />
@@ -531,30 +535,124 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-border bg-background">
+      {/* FAQ Section */}
+      <section className="py-16 md:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-2">
-              <Tv className="w-6 h-6 text-primary" />
-              <span className="font-heading text-lg font-bold text-foreground">Vizag TV Repair Expert</span>
+          <div className="flex items-center justify-center gap-3 mb-10">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <HelpCircle className="w-6 h-6 text-primary-foreground" />
             </div>
-            <p className="text-sm text-muted-foreground font-medium">
-              Doorstep TV Repair Service in Vizag City
-            </p>
-            <p className="text-sm text-muted-foreground">
-              VizagTVRepairExpert.in offers professional LED, LCD & Smart TV repair services through home service across Vizag City.
-            </p>
-            <p className="text-xs text-muted-foreground italic">
-              VizagTVRepairExpert.in is an independent TV repair service provider. We are not affiliated with or authorized by any TV manufacturing brand.
-            </p>
-            <div className="flex items-center justify-center gap-4 text-sm">
-              <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-              <span className="text-border">|</span>
-              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-3">
+              <AccordionItem value="item-1" className="bg-background border border-border rounded-xl px-6">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                  What types of TVs do you repair?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We repair LED, LCD, and Smart TVs of all major brands including Samsung, LG, Sony, Panasonic, Xiaomi, OnePlus, TCL, and more. Our technicians are trained to handle various TV technologies and models.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2" className="bg-background border border-border rounded-xl px-6">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                  Do you provide doorstep service?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Yes, we provide doorstep TV repair service only. Our technicians will visit your home or office location in Vizag City to diagnose and repair your TV. We do not have a walk-in shop service.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3" className="bg-background border border-border rounded-xl px-6">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                  How much does TV repair cost?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  The repair cost depends on the type of issue and parts required. After inspection, we provide a transparent cost estimate before proceeding with the repair. Our pricing is affordable and competitive.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4" className="bg-background border border-border rounded-xl px-6">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                  How long does the repair take?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Most common repairs are completed the same day. However, if specific parts are required, it may take 1-3 days depending on part availability. We keep you informed throughout the process.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5" className="bg-background border border-border rounded-xl px-6">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                  What areas do you cover in Vizag?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We provide doorstep TV repair service across Vizag City and nearby localities. Call us to confirm if we cover your area.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-6" className="bg-background border border-border rounded-xl px-6">
+                <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                  Do you provide warranty on repairs?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Yes, we provide warranty on repairs depending on the type of repair and parts used. The warranty period varies based on the specific repair. Ask our technician for warranty details.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-border bg-card">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
+            {/* Brand Column */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+                <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-10 w-auto" />
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Doorstep TV Repair Service in Vizag City. Professional LED, LCD & Smart TV repair services at your home.
+              </p>
             </div>
+            
+            {/* Quick Links Column */}
+            <div className="text-center">
+              <h3 className="font-heading font-semibold text-foreground mb-4">Quick Links</h3>
+              <div className="flex flex-col gap-2">
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
+                <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+                <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+                <Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms & Conditions</Link>
+              </div>
+            </div>
+            
+            {/* Contact Column */}
+            <div className="text-center md:text-right">
+              <h3 className="font-heading font-semibold text-foreground mb-4">Contact Us</h3>
+              <div className="flex flex-col gap-2">
+                <a href="tel:7815944046" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center justify-center md:justify-end gap-2">
+                  <Phone className="w-4 h-4" /> 7815944046
+                </a>
+                <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-2">
+                  <MapPin className="w-4 h-4" /> Vizag City
+                </p>
+                <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-2">
+                  <Clock className="w-4 h-4" /> Mon-Sat: 7AM-9PM
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-border pt-6 text-center">
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Vizag TV Repair Expert | vizagtvrepairexpert.in
+              Copyright © 2025 Vizag TV Repair Expert | All rights reserved.
             </p>
           </div>
         </div>
