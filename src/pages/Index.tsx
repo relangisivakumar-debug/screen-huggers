@@ -7,6 +7,10 @@ import ledTvRepair from "@/assets/led-tv-repair.webp";
 import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
 import smartTvRepair from "@/assets/smart-tv-repair.jpg";
 import plasmaTvRepair from "@/assets/plasma-tv-repair.webp";
+import powerRepair from "@/assets/power-repair.webp";
+import screenRepair from "@/assets/screen-repair.jfif";
+import soundRepair from "@/assets/sound-repair.jfif";
+import motherboardRepair from "@/assets/motherboard-repair.jfif";
 
 const Index = () => {
   return (
@@ -138,25 +142,49 @@ const Index = () => {
                 name: "LED TV Repair", 
                 icon: Monitor, 
                 image: ledTvRepair,
-                description: "Expert repair for all LED TV brands including Samsung, LG, Sony, and more."
+                description: "Complete LED TV repair services for all major brands including Samsung, LG, Sony, Panasonic, and more. We fix backlight issues, display problems, power failures, and motherboard faults with genuine spare parts and expert technicians."
               },
               { 
                 name: "LCD TV Repair", 
                 icon: Tv, 
                 image: lcdTvRepair,
-                description: "Professional LCD panel diagnostics and repair services at affordable rates."
+                description: "Professional LCD panel diagnostics and repair services at affordable rates. Our technicians handle screen replacements, inverter board repairs, T-con board issues, and power supply problems for all LCD TV models."
               },
               { 
                 name: "Smart TV Repair", 
                 icon: Zap, 
                 image: smartTvRepair,
-                description: "Fix software issues, connectivity problems, and hardware faults in Smart TVs."
+                description: "Expert Smart TV repair including software updates, WiFi connectivity issues, app crashes, HDMI port problems, and Android/WebOS system fixes. We service all smart TV brands with latest diagnostic tools."
               },
               { 
                 name: "Plasma TV Repair", 
                 icon: Lightbulb, 
                 image: plasmaTvRepair,
-                description: "Specialized plasma TV repair including power board and display issues."
+                description: "Specialized plasma TV repair services including sustain board replacement, power board repair, Y-buffer and Z-sustain fixes. We bring new life to your plasma TV with quality repairs and affordable pricing."
+              },
+              { 
+                name: "TV Not Powering On", 
+                icon: Lightbulb, 
+                image: powerRepair,
+                description: "Quick diagnosis and repair for TVs that won't turn on. We fix power supply failures, blown fuses, faulty capacitors, standby mode issues, and mainboard power problems to get your TV running again."
+              },
+              { 
+                name: "Screen & Display Issues", 
+                icon: Monitor, 
+                image: screenRepair,
+                description: "Expert solutions for all display problems including blank screens, color distortion, vertical/horizontal lines, flickering, dead pixels, and image retention. Professional screen calibration and panel replacement available."
+              },
+              { 
+                name: "Sound Problems", 
+                icon: Volume2, 
+                image: soundRepair,
+                description: "Complete audio repair services for TVs with no sound, distorted audio, buzzing noise, or speaker failures. We repair internal speakers, audio IC chips, and connectivity issues for crystal clear sound."
+              },
+              { 
+                name: "Motherboard Repair", 
+                icon: Cpu, 
+                image: motherboardRepair,
+                description: "Advanced motherboard repair and replacement services. Our skilled technicians diagnose and fix component-level issues including IC failures, circuit damage, and firmware problems to restore your TV's functionality."
               },
             ].map((service) => (
               <div 
@@ -178,28 +206,8 @@ const Index = () => {
                     </div>
                     <span className="font-medium text-foreground">{service.name}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Additional Services List */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mt-8">
-            {[
-              { name: "TV Not Powering On", icon: Lightbulb },
-              { name: "Screen & Display Issues", icon: Monitor },
-              { name: "Sound Problems", icon: Volume2 },
-              { name: "Motherboard Repair", icon: Cpu },
-            ].map((service) => (
-              <div 
-                key={service.name}
-                className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <service.icon className="w-5 h-5 text-primary" />
-                </div>
-                <span className="font-medium text-foreground">{service.name}</span>
               </div>
             ))}
           </div>
