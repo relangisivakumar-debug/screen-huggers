@@ -1,4 +1,4 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio, Award, UserCheck, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -11,6 +11,10 @@ import powerRepair from "@/assets/power-repair.webp";
 import screenRepair from "@/assets/motherboard-repair.jfif";
 import soundRepair from "@/assets/sound-repair.jfif";
 import motherboardRepair from "@/assets/screen-repair.jfif";
+import tvAutoShutoff from "@/assets/tv-auto-shutoff.jpg";
+import linesOnScreen from "@/assets/lines-on-screen.jpg";
+import portsRepair from "@/assets/ports-repair.jpg";
+import remoteRepair from "@/assets/remote-repair.jpg";
 const Index = () => {
   return <main className="min-h-screen bg-background font-body">
       {/* Navigation */}
@@ -204,22 +208,22 @@ const Index = () => {
           }, {
             name: "TV Turns Off by Itself",
             icon: Power,
-            image: powerRepair,
+            image: tvAutoShutoff,
             description: "Expert troubleshooting for TVs that randomly shut down or turn off unexpectedly. We diagnose and fix overheating issues, faulty power boards, timer settings, software glitches, and component failures causing auto-shutoff."
           }, {
             name: "Lines on Screen",
             icon: Rows3,
-            image: screenRepair,
+            image: linesOnScreen,
             description: "Professional repair for vertical and horizontal lines on your TV screen. We fix T-con board failures, panel ribbon cable issues, driver IC problems, and display panel faults to restore clear picture quality."
           }, {
             name: "Ports Not Working",
             icon: Usb,
-            image: motherboardRepair,
+            image: portsRepair,
             description: "Complete port repair services for HDMI, USB, AV, and other connectivity issues. We fix loose ports, damaged connectors, mainboard port failures, and software-related input problems for seamless device connectivity."
           }, {
             name: "Remote Control Not Working",
             icon: Radio,
-            image: soundRepair,
+            image: remoteRepair,
             description: "Troubleshooting and repair for TV remote control issues. We diagnose IR sensor problems, mainboard receiver failures, and pairing issues. We also help with remote replacement and universal remote setup."
           }].map(service => <div key={service.name} className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
@@ -304,6 +308,96 @@ const Index = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 After repair, the TV is fully tested for picture and sound quality. Doorstep repairs are completed on-site, and shop repairs are safely delivered back.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-primary/10 to-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 mb-10">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <Award className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Our Achievements</h2>
+          </div>
+          
+          <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-6 bg-background rounded-2xl border border-border">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-2">15+</h3>
+              <p className="text-muted-foreground">Years of Experience</p>
+            </div>
+            <div className="text-center p-6 bg-background rounded-2xl border border-border">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <UserCheck className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-2">5000+</h3>
+              <p className="text-muted-foreground">Happy Customers</p>
+            </div>
+            <div className="text-center p-6 bg-background rounded-2xl border border-border">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-2">4+</h3>
+              <p className="text-muted-foreground">Team Members</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 mb-10">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <MessageCircle className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Customer Reviews</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-muted-foreground mb-4 italic">
+                "Excellent service! My LED TV had power issues and they fixed it the same day at my doorstep. Very professional technician and reasonable pricing. Highly recommended for TV repair in Vizag."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="font-semibold text-primary">RS</span>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">R. Siva Kumar</p>
+                  <p className="text-sm text-muted-foreground">Vizag</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-muted-foreground mb-4 italic">
+                "My Smart TV had display lines and I was worried it needed panel replacement. But the technician diagnosed it properly and fixed the T-con board issue at a very affordable cost. Great work!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="font-semibold text-primary">MK</span>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">M. Keerthana</p>
+                  <p className="text-sm text-muted-foreground">Vizag</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
