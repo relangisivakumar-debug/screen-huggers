@@ -35,8 +35,8 @@ const Index = () => {
             
             {/* Mobile Menu */}
             <Sheet>
-              <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="icon">
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="md:hidden" aria-label="Open menu">
                   <Menu className="w-5 h-5" />
                 </Button>
               </SheetTrigger>
