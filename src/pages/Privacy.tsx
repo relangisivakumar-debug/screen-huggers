@@ -29,7 +29,7 @@ const Privacy = () => {
             
             <div className="space-y-6 text-muted-foreground">
               <p>
-                Vizag TV Repair Expert respects your privacy and is committed to protecting your personal information.
+                VizagTVRepairExpert.in respects your privacy. Any personal information shared through calls or contact forms is used only to provide TV repair services. We do not sell or misuse customer information.
               </p>
               
               <div>
@@ -72,6 +72,20 @@ const Privacy = () => {
                   By using this website, you agree to this Privacy Policy.
                 </p>
               </div>
+
+              <div className="mt-8 p-4 bg-card rounded-lg border border-border">
+                <h2 className="font-heading text-lg font-semibold text-foreground mb-2">Terms & Conditions</h2>
+                <p>
+                  By using our services, you agree to our service terms. Service charges, repair approval, and service availability depend on inspection results. We reserve the right to refuse service in certain cases.
+                </p>
+              </div>
+
+              <div className="mt-4 p-4 bg-muted/30 rounded-lg border border-border">
+                <h2 className="font-heading text-lg font-semibold text-foreground mb-2">Disclaimer</h2>
+                <p className="text-sm italic">
+                  VizagTVRepairExpert.in is an independent TV repair service provider offering doorstep repair services in Vizag City. We are not affiliated with or authorized by any TV manufacturing brand.
+                </p>
+              </div>
               
               <div>
                 <h2 className="font-heading text-lg font-semibold text-foreground mb-2">Contact for Privacy Concerns</h2>
@@ -95,11 +109,11 @@ const Privacy = () => {
       <footer className="py-8 border-t border-border bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
-            <p className="text-sm text-muted-foreground">
-              © Vizag TV Repair Expert | vizagtvrepairexpert.in
+            <p className="text-sm text-muted-foreground font-medium">
+              Doorstep TV Repair Service in Vizag City
             </p>
             <p className="text-sm text-muted-foreground">
-              Independent TV repair service provider in Vizag City.
+              © {new Date().getFullYear()} Vizag TV Repair Expert | vizagtvrepairexpert.in
             </p>
           </div>
         </div>
