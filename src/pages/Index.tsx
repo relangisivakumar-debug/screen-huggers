@@ -1,5 +1,6 @@
 import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import tvRepairHero from "@/assets/tv-repair-hero.jpg";
 
 const Index = () => {
@@ -228,7 +229,7 @@ const Index = () => {
               Independent TV repair service provider in Vizag City.
             </p>
             <div className="flex items-center justify-center gap-4 text-sm">
-              <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+              <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
               <span className="text-border">|</span>
               <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             </div>
