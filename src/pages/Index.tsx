@@ -82,7 +82,7 @@ const Index = () => {
                 </Button>
               </a>
             </div>
-            <div className="hidden md:block">
+            <div>
               <img 
                 src={tvRepairHero} 
                 alt="Professional TV repair technician fixing LED TV" 
