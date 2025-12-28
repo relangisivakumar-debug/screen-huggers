@@ -21,14 +21,14 @@ import noPictureRepair from "@/assets/no-picture-repair.jpg";
 import powerSupplyRepair from "@/assets/power-supply-repair.jpg";
 import wifiIssues from "@/assets/wifi-issues.jpg";
 import homeOfficeService from "@/assets/home-office-service.jpg";
-import logoGenerated from "@/assets/logo-generated.png";
+import logoNew from "@/assets/logo-new.png";
 const Index = () => {
   return <main className="min-h-screen bg-background font-body">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-12 md:h-14 w-auto" />
+            <img src={logoNew} alt="Vizag TV Repair Expert Logo" className="h-14 md:h-16 w-auto" />
             <span className="font-heading font-bold text-lg md:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
               Vizag TV Repair Expert
             </span>
@@ -617,7 +617,7 @@ const Index = () => {
             {/* Brand Column */}
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-14 w-auto" />
+                <img src={logoNew} alt="Vizag TV Repair Expert Logo" className="h-16 w-auto" />
                 <span className="font-heading font-bold text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                   Vizag TV Repair Expert
                 </span>
