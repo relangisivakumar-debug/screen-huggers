@@ -296,9 +296,7 @@ const Index = () => {
             <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
               <Star className="w-6 h-6 text-primary-foreground" />
             </div>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Why Choose Vizag TV Repair Expert
-            </h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Why Choose Us ?</h2>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
