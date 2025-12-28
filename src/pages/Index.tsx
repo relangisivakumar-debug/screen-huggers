@@ -17,8 +17,8 @@ const Index = () => {
             <span className="font-heading text-xl font-semibold text-foreground">Vizag TV Repair Expert</span>
           </div>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Menu (visible on mobile + desktop) */}
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm">
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
             <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
