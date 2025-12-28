@@ -2,15 +2,15 @@ import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Head
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import heroTechnician from "@/assets/hero-technician.webp";
+import heroTechnician from "@/assets/hero-technician-new.png";
 import ledTvRepair from "@/assets/led-tv-repair.webp";
 import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
 import smartTvRepair from "@/assets/smart-tv-repair.jpg";
 import plasmaTvRepair from "@/assets/plasma-tv-repair.webp";
 import powerRepair from "@/assets/power-repair.webp";
-import screenRepair from "@/assets/screen-repair.jfif";
+import screenRepair from "@/assets/motherboard-repair.jfif";
 import soundRepair from "@/assets/sound-repair.jfif";
-import motherboardRepair from "@/assets/motherboard-repair.jfif";
+import motherboardRepair from "@/assets/screen-repair.jfif";
 
 const Index = () => {
   return (
