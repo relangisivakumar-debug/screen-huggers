@@ -1,6 +1,7 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import tvRepairHero from "@/assets/tv-repair-hero.jpg";
 
 const Index = () => {
@@ -15,18 +16,46 @@ const Index = () => {
             </div>
             <span className="font-heading text-xl font-semibold text-foreground">Vizag TV Repair Expert</span>
           </div>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
             <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
           </div>
-          <a href="tel:7815944046">
-            <Button variant="default" size="sm" className="hidden md:inline-flex">
-              <Phone className="w-4 h-4" />
-              7815944046
-            </Button>
-          </a>
+          
+          <div className="flex items-center gap-3">
+            <a href="tel:7815944046">
+              <Button variant="default" size="sm" className="hidden md:inline-flex">
+                <Phone className="w-4 h-4" />
+                7815944046
+              </Button>
+            </a>
+            
+            {/* Mobile Menu */}
+            <Sheet>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon">
+                  <Menu className="w-5 h-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[280px]">
+                <div className="flex flex-col gap-6 mt-8">
+                  <a href="#" className="text-lg font-medium text-foreground hover:text-primary transition-colors">Home</a>
+                  <a href="#about" className="text-lg font-medium text-foreground hover:text-primary transition-colors">About Us</a>
+                  <a href="#services" className="text-lg font-medium text-foreground hover:text-primary transition-colors">Services</a>
+                  <a href="#contact" className="text-lg font-medium text-foreground hover:text-primary transition-colors">Contact</a>
+                  <a href="tel:7815944046" className="mt-4">
+                    <Button variant="default" className="w-full">
+                      <Phone className="w-4 h-4 mr-2" />
+                      7815944046
+                    </Button>
+                  </a>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </nav>
 
