@@ -63,6 +63,15 @@ const Index = () => {
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-card to-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <div className="order-first md:order-none">
+              <img 
+                src={tvRepairHero} 
+                alt="Professional TV repair technician fixing LED TV" 
+                className="rounded-2xl shadow-lg w-full"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
             <div className="text-center md:text-left">
               <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
                 TV Repair Service in Vizag | Vizag TV Repair Expert
@@ -81,13 +90,6 @@ const Index = () => {
                   Call Now: 7815944046
                 </Button>
               </a>
-            </div>
-            <div>
-              <img 
-                src={tvRepairHero} 
-                alt="Professional TV repair technician fixing LED TV" 
-                className="rounded-2xl shadow-lg w-full"
-              />
             </div>
           </div>
         </div>
