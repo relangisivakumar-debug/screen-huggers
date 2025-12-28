@@ -1,4 +1,4 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -183,7 +183,7 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[{
             name: "TV Not Powering On",
-            icon: Lightbulb,
+            icon: Power,
             image: powerRepair,
             description: "Quick diagnosis and repair for TVs that won't turn on. We fix power supply failures, blown fuses, faulty capacitors, standby mode issues, and mainboard power problems to get your TV running again."
           }, {
@@ -201,6 +201,26 @@ const Index = () => {
             icon: Cpu,
             image: motherboardRepair,
             description: "Advanced motherboard repair and replacement services. Our skilled technicians diagnose and fix component-level issues including IC failures, circuit damage, and firmware problems to restore your TV's functionality."
+          }, {
+            name: "TV Turns Off by Itself",
+            icon: Power,
+            image: powerRepair,
+            description: "Expert troubleshooting for TVs that randomly shut down or turn off unexpectedly. We diagnose and fix overheating issues, faulty power boards, timer settings, software glitches, and component failures causing auto-shutoff."
+          }, {
+            name: "Lines on Screen",
+            icon: Rows3,
+            image: screenRepair,
+            description: "Professional repair for vertical and horizontal lines on your TV screen. We fix T-con board failures, panel ribbon cable issues, driver IC problems, and display panel faults to restore clear picture quality."
+          }, {
+            name: "Ports Not Working",
+            icon: Usb,
+            image: motherboardRepair,
+            description: "Complete port repair services for HDMI, USB, AV, and other connectivity issues. We fix loose ports, damaged connectors, mainboard port failures, and software-related input problems for seamless device connectivity."
+          }, {
+            name: "Remote Control Not Working",
+            icon: Radio,
+            image: soundRepair,
+            description: "Troubleshooting and repair for TV remote control issues. We diagnose IR sensor problems, mainboard receiver failures, and pairing issues. We also help with remote replacement and universal remote setup."
           }].map(service => <div key={service.name} className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
                   <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
