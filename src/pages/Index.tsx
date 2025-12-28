@@ -1,4 +1,4 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -172,6 +172,39 @@ const Index = () => {
                 image: plasmaTvRepair,
                 description: "Specialized plasma TV repair services including sustain board replacement, power board repair, Y-buffer and Z-sustain fixes. We bring new life to your plasma TV with quality repairs and affordable pricing."
               },
+            ].map((service) => (
+              <div 
+                key={service.name}
+                className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <service.icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="font-medium text-foreground">{service.name}</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* More Quality Repair Services Subheading */}
+          <p className="text-center mt-12 mb-8 text-lg text-muted-foreground">
+            Our More <span className="font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Quality Repair Services</span>
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
               { 
                 name: "TV Not Powering On", 
                 icon: Lightbulb, 
@@ -228,8 +261,76 @@ const Index = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <Tv className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              📺 How It Works – TV Repair Process
+            </h2>
+          </div>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Simple 3-step process to get your TV repaired quickly and professionally
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Step 1 */}
+            <div className="bg-card border border-border rounded-2xl p-6 text-center relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center text-sm">
+                1
+              </div>
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mt-4 mb-4">
+                <CalendarCheck className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
+                Service Booking
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <span className="font-medium text-foreground">Doorstep / At-Shop</span><br />
+                Book TV repair service and choose either doorstep service at home or at-shop service based on your convenience.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-card border border-border rounded-2xl p-6 text-center relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center text-sm">
+                2
+              </div>
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mt-4 mb-4">
+                <Search className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
+                Diagnosis & Repair
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                A trained technician inspects the TV, identifies the issue, and performs the required repair or part replacement using quality components.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-card border border-border rounded-2xl p-6 text-center relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center text-sm">
+                3
+              </div>
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mt-4 mb-4">
+                <PackageCheck className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
+                Testing & Delivery
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                After repair, the TV is fully tested for picture and sound quality. Doorstep repairs are completed on-site, and shop repairs are safely delivered back.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
-      <section id="why-us" className="py-16 md:py-20">
+      <section id="why-us" className="py-16 md:py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
