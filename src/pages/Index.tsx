@@ -27,9 +27,12 @@ const Index = () => {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-10 md:h-12 w-auto" />
-          </div>
+          <a href="#" className="flex items-center gap-3">
+            <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-12 md:h-14 w-auto" />
+            <span className="font-heading font-bold text-lg md:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              Vizag TV Repair Expert
+            </span>
+          </a>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
@@ -613,8 +616,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
             {/* Brand Column */}
             <div className="text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
-                <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-10 w-auto" />
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+                <img src={logoGenerated} alt="Vizag TV Repair Expert Logo" className="h-14 w-auto" />
+                <span className="font-heading font-bold text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                  Vizag TV Repair Expert
+                </span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Doorstep TV Repair Service in Vizag City. Professional LED, LCD & Smart TV repair services at your home.
