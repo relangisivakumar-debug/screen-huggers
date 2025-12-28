@@ -1,5 +1,8 @@
 import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import tvRepairHero from "@/assets/tv-repair-hero.jpg";
+import happyFamilyTv from "@/assets/happy-family-tv.jpg";
+import doorstepService from "@/assets/doorstep-service.jpg";
 
 const Index = () => {
   return (
@@ -31,24 +34,33 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-card to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-              TV Repair Service in Vizag | Vizag TV Repair Expert
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground mb-4">
-              Vizag TV Repair Expert provides reliable LED, LCD, and Smart TV repair services in Vizag City.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              We offer fast, professional, and affordable TV repair service at your doorstep.
-            </p>
-            
-            <a href="tel:7815944046">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                <Phone className="w-5 h-5" />
-                Call Now: 7815944046
-              </Button>
-            </a>
+          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <div className="text-center md:text-left">
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+                TV Repair Service in Vizag | Vizag TV Repair Expert
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground mb-4">
+                Vizag TV Repair Expert provides reliable LED, LCD, and Smart TV repair services in Vizag City.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                We offer fast, professional, and affordable TV repair service at your doorstep.
+              </p>
+              
+              <a href="tel:7815944046">
+                <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+                  <Phone className="w-5 h-5" />
+                  Call Now: 7815944046
+                </Button>
+              </a>
+            </div>
+            <div className="hidden md:block">
+              <img 
+                src={tvRepairHero} 
+                alt="Professional TV repair technician fixing LED TV" 
+                className="rounded-2xl shadow-lg w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -56,21 +68,30 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
-              About Vizag TV Repair Expert
-            </h2>
-            <div className="space-y-4 text-muted-foreground text-center">
-              <p>
-                Vizag TV Repair Expert is an independent TV repair service provider serving Vizag City.
-                We specialize in diagnosing and repairing LED, LCD, and Smart TVs for residential customers.
-              </p>
-              <p>
-                Our focus is on honest service, clear communication, and quality repair solutions.
-              </p>
-              <p className="text-sm italic border-l-4 border-primary pl-4 text-left bg-card py-3 rounded-r-lg">
-                Vizag TV Repair Expert is not an authorized service center and is not associated with any TV brand.
-              </p>
+          <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+            <div className="order-2 md:order-1">
+              <img 
+                src={happyFamilyTv} 
+                alt="Happy family watching TV in Vizag" 
+                className="rounded-2xl shadow-lg w-full"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
+                About Vizag TV Repair Expert
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Vizag TV Repair Expert is an independent TV repair service provider serving Vizag City.
+                  We specialize in diagnosing and repairing LED, LCD, and Smart TVs for residential customers.
+                </p>
+                <p>
+                  Our focus is on honest service, clear communication, and quality repair solutions.
+                </p>
+                <p className="text-sm italic border-l-4 border-primary pl-4 bg-card py-3 rounded-r-lg">
+                  Vizag TV Repair Expert is not an authorized service center and is not associated with any TV brand.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -118,28 +139,39 @@ const Index = () => {
       {/* Why Choose Us Section */}
       <section id="why-us" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-10 text-center">
-            Why Choose Vizag TV Repair Expert
-          </h2>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { text: "Experienced TV repair technicians", icon: Users },
-              { text: "Doorstep service within Vizag City", icon: MapPin },
-              { text: "Affordable and transparent pricing", icon: Shield },
-              { text: "Quick response and support", icon: Clock },
-              { text: "Customer-focused service", icon: Headphones },
-            ].map((item) => (
-              <div 
-                key={item.text}
-                className="flex items-center gap-3 p-4"
-              >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 text-primary" />
-                </div>
-                <span className="text-foreground">{item.text}</span>
+          <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+            <div>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8">
+                Why Choose Vizag TV Repair Expert
+              </h2>
+              
+              <div className="space-y-4">
+                {[
+                  { text: "Experienced TV repair technicians", icon: Users },
+                  { text: "Doorstep service within Vizag City", icon: MapPin },
+                  { text: "Affordable and transparent pricing", icon: Shield },
+                  { text: "Quick response and support", icon: Clock },
+                  { text: "Customer-focused service", icon: Headphones },
+                ].map((item) => (
+                  <div 
+                    key={item.text}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-card"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-foreground">{item.text}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="hidden md:block">
+              <img 
+                src={doorstepService} 
+                alt="Doorstep TV repair service in Vizag" 
+                className="rounded-2xl shadow-lg w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
