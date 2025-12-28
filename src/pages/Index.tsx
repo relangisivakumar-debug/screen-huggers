@@ -1,8 +1,8 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import heroTechnician from "@/assets/hero-technician-new.png";
+import heroTechnician from "@/assets/hero-technician-clean.png";
 import ledTvRepair from "@/assets/led-tv-repair.webp";
 import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
 import smartTvRepair from "@/assets/smart-tv-repair.jpg";
@@ -107,9 +107,14 @@ const Index = () => {
       <section id="about" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
-              About Vizag TV Repair Expert
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+                <Info className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                About Vizag TV Repair Expert
+              </h2>
+            </div>
             <div className="space-y-4 text-muted-foreground text-center">
               <p>
                 Vizag TV Repair Expert is an independent TV repair service provider serving Vizag City.
@@ -129,9 +134,14 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-16 md:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
-            Our TV Repair Services
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <Settings className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Our TV Repair Services
+            </h2>
+          </div>
           <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
             We provide complete TV repair solutions, including:
           </p>
@@ -221,9 +231,14 @@ const Index = () => {
       {/* Why Choose Us Section */}
       <section id="why-us" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-10 text-center">
-            Why Choose Vizag TV Repair Expert
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-10">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <Star className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Why Choose Vizag TV Repair Expert
+            </h2>
+          </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
@@ -251,11 +266,13 @@ const Index = () => {
       <section className="py-16 md:py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
-              Service Area
-            </h2>
-            <div className="flex items-center justify-center gap-2 text-primary mb-4">
-              <MapPin className="w-6 h-6" />
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Service Area
+              </h2>
             </div>
             <p className="text-muted-foreground">
               We provide TV repair services across Vizag City (Visakhapatnam).
@@ -271,9 +288,14 @@ const Index = () => {
       <section id="contact" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8">
-              Contact Us
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+                <Phone className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Contact Us
+              </h2>
+            </div>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-center justify-center gap-3">
