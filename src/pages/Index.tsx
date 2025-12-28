@@ -1,7 +1,8 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio, Award, UserCheck, Calendar } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle, Menu, Info, Settings, Star, CalendarCheck, Search, PackageCheck, Power, Rows3, Usb, Radio, Award, UserCheck, Calendar, Wifi, Home, MonitorX, BatteryWarning } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@/assets/logo.png";
 import heroTechnician from "@/assets/hero-technician-clean.png";
 import ledTvRepair from "@/assets/led-tv-repair.webp";
 import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
@@ -15,16 +16,17 @@ import tvAutoShutoff from "@/assets/tv-auto-shutoff.jpg";
 import linesOnScreen from "@/assets/lines-on-screen.jpg";
 import portsRepair from "@/assets/ports-repair.jpg";
 import remoteRepair from "@/assets/remote-repair.jpg";
+import noPictureRepair from "@/assets/no-picture-repair.jpg";
+import powerSupplyRepair from "@/assets/power-supply-repair.jpg";
+import wifiIssues from "@/assets/wifi-issues.jpg";
+import homeOfficeService from "@/assets/home-office-service.jpg";
 const Index = () => {
   return <main className="min-h-screen bg-background font-body">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Tv className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-heading text-xl font-semibold text-foreground">Vizag TV Repair Expert</span>
+            <img src={logo} alt="Vizag TV Repair Expert" className="h-10 md:h-12 w-auto" />
           </div>
           
           {/* Desktop Menu */}
@@ -225,6 +227,26 @@ const Index = () => {
             icon: Radio,
             image: remoteRepair,
             description: "Troubleshooting and repair for TV remote control issues. We diagnose IR sensor problems, mainboard receiver failures, and pairing issues. We also help with remote replacement and universal remote setup."
+          }, {
+            name: "No Picture but Sound Working",
+            icon: MonitorX,
+            image: noPictureRepair,
+            description: "Expert diagnosis for TVs with audio but no display. We fix backlight failures, inverter board issues, T-con problems, LED driver faults, and panel connection issues to restore your picture quality."
+          }, {
+            name: "Power Supply Issues",
+            icon: BatteryWarning,
+            image: powerSupplyRepair,
+            description: "Complete power supply repair services including capacitor replacement, voltage regulator fixes, transformer issues, and power board replacements. We restore stable power to your TV for reliable operation."
+          }, {
+            name: "Connectivity & WiFi Issues",
+            icon: Wifi,
+            image: wifiIssues,
+            description: "Troubleshooting and repair for Smart TV connectivity problems. We fix WiFi connection failures, Bluetooth issues, network adapter problems, and software-related connectivity issues for seamless streaming."
+          }, {
+            name: "Home & Office TV Service",
+            icon: Home,
+            image: homeOfficeService,
+            description: "Professional TV repair services for both residential and commercial spaces. We provide on-site repairs, regular maintenance, and installation services for homes, offices, hotels, and businesses across Vizag."
           }].map(service => <div key={service.name} className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
                   <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
@@ -508,10 +530,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Tv className="w-4 h-4 text-primary-foreground" />
-              </div>
-              <span className="font-heading font-semibold text-foreground">Vizag TV Repair Expert</span>
+              <img src={logo} alt="Vizag TV Repair Expert" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               © Vizag TV Repair Expert | vizagtvrepairexpert.in
