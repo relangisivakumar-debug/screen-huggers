@@ -201,75 +201,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Privacy Policy Section */}
-      <section id="privacy" className="py-16 md:py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
-              Privacy Policy
-            </h2>
-            <p className="text-center text-muted-foreground mb-8">
-              Privacy Policy – Vizag TV Repair Expert
-            </p>
-            
-            <div className="space-y-6 text-muted-foreground">
-              <p>
-                Vizag TV Repair Expert respects your privacy and is committed to protecting your personal information.
-              </p>
-              
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Information We Collect</h3>
-                <p className="mb-2">We may collect basic information such as:</p>
-                <ul className="list-disc list-inside space-y-1 pl-2">
-                  <li>Name</li>
-                  <li>Phone number</li>
-                  <li>Location details (for service purposes)</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">How We Use Your Information</h3>
-                <p className="mb-2">The information collected is used only to:</p>
-                <ul className="list-disc list-inside space-y-1 pl-2">
-                  <li>Contact you regarding service requests</li>
-                  <li>Provide TV repair services</li>
-                  <li>Improve customer support</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Information Sharing</h3>
-                <p>
-                  We do not sell, rent, or share your personal information with third parties, except when required by law.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Data Security</h3>
-                <p>
-                  We take reasonable steps to protect your personal information from unauthorized access or misuse.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Consent</h3>
-                <p>
-                  By using this website, you agree to this Privacy Policy.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Contact for Privacy Concerns</h3>
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-primary" />
-                  7815944046
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-8 border-t border-border bg-background">
         <div className="container mx-auto px-4">
@@ -287,7 +218,7 @@ const Index = () => {
               Independent TV repair service provider in Vizag City.
             </p>
             <div className="flex items-center justify-center gap-4 text-sm">
-              <a href="#privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
               <span className="text-border">|</span>
               <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             </div>
