@@ -11,10 +11,8 @@ import powerRepair from "@/assets/power-repair.webp";
 import screenRepair from "@/assets/motherboard-repair.jfif";
 import soundRepair from "@/assets/sound-repair.jfif";
 import motherboardRepair from "@/assets/screen-repair.jfif";
-
 const Index = () => {
-  return (
-    <main className="min-h-screen bg-background font-body">
+  return <main className="min-h-screen bg-background font-body">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -72,13 +70,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <div className="order-first md:order-none">
-              <img 
-                src={heroTechnician} 
-                alt="Professional TV repair technician in red shirt fixing LED TV" 
-                className="rounded-2xl shadow-lg w-full"
-                loading="eager"
-                decoding="async"
-              />
+              <img src={heroTechnician} alt="Professional TV repair technician in red shirt fixing LED TV" className="rounded-2xl shadow-lg w-full" loading="eager" decoding="async" />
             </div>
             <div className="text-center md:text-left">
               <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
@@ -147,43 +139,29 @@ const Index = () => {
           </p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {[
-              { 
-                name: "LED TV Repair", 
-                icon: Monitor, 
-                image: ledTvRepair,
-                description: "Complete LED TV repair services for all major brands including Samsung, LG, Sony, Panasonic, and more. We fix backlight issues, display problems, power failures, and motherboard faults with genuine spare parts and expert technicians."
-              },
-              { 
-                name: "LCD TV Repair", 
-                icon: Tv, 
-                image: lcdTvRepair,
-                description: "Professional LCD panel diagnostics and repair services at affordable rates. Our technicians handle screen replacements, inverter board repairs, T-con board issues, and power supply problems for all LCD TV models."
-              },
-              { 
-                name: "Smart TV Repair", 
-                icon: Zap, 
-                image: smartTvRepair,
-                description: "Expert Smart TV repair including software updates, WiFi connectivity issues, app crashes, HDMI port problems, and Android/WebOS system fixes. We service all smart TV brands with latest diagnostic tools."
-              },
-              { 
-                name: "Plasma TV Repair", 
-                icon: Lightbulb, 
-                image: plasmaTvRepair,
-                description: "Specialized plasma TV repair services including sustain board replacement, power board repair, Y-buffer and Z-sustain fixes. We bring new life to your plasma TV with quality repairs and affordable pricing."
-              },
-            ].map((service) => (
-              <div 
-                key={service.name}
-                className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group"
-              >
+            {[{
+            name: "LED TV Repair",
+            icon: Monitor,
+            image: ledTvRepair,
+            description: "Complete LED TV repair services for all major brands including Samsung, LG, Sony, Panasonic, and more. We fix backlight issues, display problems, power failures, and motherboard faults with genuine spare parts and expert technicians."
+          }, {
+            name: "LCD TV Repair",
+            icon: Tv,
+            image: lcdTvRepair,
+            description: "Professional LCD panel diagnostics and repair services at affordable rates. Our technicians handle screen replacements, inverter board repairs, T-con board issues, and power supply problems for all LCD TV models."
+          }, {
+            name: "Smart TV Repair",
+            icon: Zap,
+            image: smartTvRepair,
+            description: "Expert Smart TV repair including software updates, WiFi connectivity issues, app crashes, HDMI port problems, and Android/WebOS system fixes. We service all smart TV brands with latest diagnostic tools."
+          }, {
+            name: "Plasma TV Repair",
+            icon: Lightbulb,
+            image: plasmaTvRepair,
+            description: "Specialized plasma TV repair services including sustain board replacement, power board repair, Y-buffer and Z-sustain fixes. We bring new life to your plasma TV with quality repairs and affordable pricing."
+          }].map(service => <div key={service.name} className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+                  <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 </div>
                 <div className="p-4">
                   <div className="flex items-center gap-3 mb-2">
@@ -194,8 +172,7 @@ const Index = () => {
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* More Quality Repair Services Subheading */}
@@ -204,43 +181,29 @@ const Index = () => {
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {[
-              { 
-                name: "TV Not Powering On", 
-                icon: Lightbulb, 
-                image: powerRepair,
-                description: "Quick diagnosis and repair for TVs that won't turn on. We fix power supply failures, blown fuses, faulty capacitors, standby mode issues, and mainboard power problems to get your TV running again."
-              },
-              { 
-                name: "Screen & Display Issues", 
-                icon: Monitor, 
-                image: screenRepair,
-                description: "Expert solutions for all display problems including blank screens, color distortion, vertical/horizontal lines, flickering, dead pixels, and image retention. Professional screen calibration and panel replacement available."
-              },
-              { 
-                name: "Sound Problems", 
-                icon: Volume2, 
-                image: soundRepair,
-                description: "Complete audio repair services for TVs with no sound, distorted audio, buzzing noise, or speaker failures. We repair internal speakers, audio IC chips, and connectivity issues for crystal clear sound."
-              },
-              { 
-                name: "Motherboard Repair", 
-                icon: Cpu, 
-                image: motherboardRepair,
-                description: "Advanced motherboard repair and replacement services. Our skilled technicians diagnose and fix component-level issues including IC failures, circuit damage, and firmware problems to restore your TV's functionality."
-              },
-            ].map((service) => (
-              <div 
-                key={service.name}
-                className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group"
-              >
+            {[{
+            name: "TV Not Powering On",
+            icon: Lightbulb,
+            image: powerRepair,
+            description: "Quick diagnosis and repair for TVs that won't turn on. We fix power supply failures, blown fuses, faulty capacitors, standby mode issues, and mainboard power problems to get your TV running again."
+          }, {
+            name: "Screen & Display Issues",
+            icon: Monitor,
+            image: screenRepair,
+            description: "Expert solutions for all display problems including blank screens, color distortion, vertical/horizontal lines, flickering, dead pixels, and image retention. Professional screen calibration and panel replacement available."
+          }, {
+            name: "Sound Problems",
+            icon: Volume2,
+            image: soundRepair,
+            description: "Complete audio repair services for TVs with no sound, distorted audio, buzzing noise, or speaker failures. We repair internal speakers, audio IC chips, and connectivity issues for crystal clear sound."
+          }, {
+            name: "Motherboard Repair",
+            icon: Cpu,
+            image: motherboardRepair,
+            description: "Advanced motherboard repair and replacement services. Our skilled technicians diagnose and fix component-level issues including IC failures, circuit damage, and firmware problems to restore your TV's functionality."
+          }].map(service => <div key={service.name} className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+                  <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 </div>
                 <div className="p-4">
                   <div className="flex items-center gap-3 mb-2">
@@ -251,8 +214,7 @@ const Index = () => {
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <p className="text-muted-foreground text-center mt-8 text-sm">
@@ -268,9 +230,7 @@ const Index = () => {
             <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
               <Tv className="w-6 h-6 text-primary-foreground" />
             </div>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              📺 How It Works – TV Repair Process
-            </h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"> How It Works – TV Repair Process</h2>
           </div>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Simple 3-step process to get your TV repaired quickly and professionally
@@ -342,23 +302,27 @@ const Index = () => {
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { text: "Experienced TV repair technicians", icon: Users },
-              { text: "Doorstep service within Vizag City", icon: MapPin },
-              { text: "Affordable and transparent pricing", icon: Shield },
-              { text: "Quick response and support", icon: Clock },
-              { text: "Customer-focused service", icon: Headphones },
-            ].map((item) => (
-              <div 
-                key={item.text}
-                className="flex items-center gap-3 p-4"
-              >
+            {[{
+            text: "Experienced TV repair technicians",
+            icon: Users
+          }, {
+            text: "Doorstep service within Vizag City",
+            icon: MapPin
+          }, {
+            text: "Affordable and transparent pricing",
+            icon: Shield
+          }, {
+            text: "Quick response and support",
+            icon: Clock
+          }, {
+            text: "Customer-focused service",
+            icon: Headphones
+          }].map(item => <div key={item.text} className="flex items-center gap-3 p-4">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-foreground">{item.text}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -453,26 +417,14 @@ const Index = () => {
       </footer>
 
       {/* Floating Call Button - Bottom Left */}
-      <a 
-        href="tel:7815944046" 
-        className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-        aria-label="Call us"
-      >
+      <a href="tel:7815944046" className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label="Call us">
         <Phone className="w-6 h-6 text-white" />
       </a>
 
       {/* Floating WhatsApp Button - Bottom Right */}
-      <a 
-        href="https://wa.me/917815944046" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-        aria-label="Chat on WhatsApp"
-      >
+      <a href="https://wa.me/917815944046" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label="Chat on WhatsApp">
         <MessageCircle className="w-6 h-6 text-white" />
       </a>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
