@@ -2,7 +2,7 @@ import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Head
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@/assets/logo.png";
+
 import heroTechnician from "@/assets/hero-technician-clean.png";
 import ledTvRepair from "@/assets/led-tv-repair.webp";
 import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
@@ -26,7 +26,8 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Vizag TV Repair Expert" className="h-10 md:h-12 w-auto" />
+            <Tv className="w-8 h-8 text-primary" />
+            <span className="font-heading text-lg md:text-xl font-bold text-foreground">Vizag TV Repair Expert</span>
           </div>
           
           {/* Desktop Menu */}
@@ -80,15 +81,18 @@ const Index = () => {
             </div>
             <div className="text-center md:text-left">
               <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-                TV Repair Service in Vizag | Vizag TV Repair Expert
+                Doorstep TV Repair Service in Vizag City
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground mb-4">
-                Vizag TV Repair Expert provides reliable LED, LCD, and Smart TV repair services in Vizag City.
+                VizagTVRepairExpert.in provides professional TV repair services at your home across Vizag City. We specialize in diagnosing and fixing TV issues efficiently with doorstep service only.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                We offer fast, professional, and affordable TV repair service at your doorstep.
-              </p>
+              <div className="text-left mb-8 space-y-2">
+                <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> LED, LCD & Smart TV Repair</p>
+                <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> Home Service Available</p>
+                <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> No Walk-In / No Shop Visit</p>
+                <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> Experienced Technicians</p>
+              </div>
               
               <a href="tel:7815944046">
                 <Button variant="hero" size="lg" className="text-lg px-8 py-6">
@@ -141,7 +145,7 @@ const Index = () => {
             </h2>
           </div>
           <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-            We provide complete TV repair solutions, including:
+            We handle a wide range of TV problems. We repair LED, LCD & Smart TVs of all major models using professional tools and methods.
           </p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -289,14 +293,13 @@ const Index = () => {
                 1
               </div>
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mt-4 mb-4">
-                <CalendarCheck className="w-8 h-8 text-primary" />
+                <Phone className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
-                Service Booking
+                Call & Book Service
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <span className="font-medium text-foreground">Doorstep / At-Shop</span><br />
-                Book TV repair service and choose either doorstep service at home or at-shop service based on your convenience.
+                Contact us and explain your TV issue. We'll schedule a convenient time for our technician to visit your location.
               </p>
             </div>
 
@@ -309,10 +312,10 @@ const Index = () => {
                 <Search className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
-                Diagnosis & Repair
+                Inspection at Home
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                A trained technician inspects the TV, identifies the issue, and performs the required repair or part replacement using quality components.
+                Our technician visits your location in Vizag City and checks the TV to identify the issue.
               </p>
             </div>
 
@@ -325,10 +328,10 @@ const Index = () => {
                 <PackageCheck className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
-                Testing & Delivery
+                Repair & Testing
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                After repair, the TV is fully tested for picture and sound quality. Doorstep repairs are completed on-site, and shop repairs are safely delivered back.
+                After approval, the issue is repaired and tested for proper working to ensure quality results.
               </p>
             </div>
           </div>
@@ -437,19 +440,19 @@ const Index = () => {
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[{
-            text: "Experienced TV repair technicians",
-            icon: Users
-          }, {
-            text: "Doorstep service within Vizag City",
+            text: "Doorstep TV repair service in Vizag City",
             icon: MapPin
           }, {
-            text: "Affordable and transparent pricing",
+            text: "Quick diagnosis & reliable solutions",
+            icon: Search
+          }, {
+            text: "Transparent service process",
             icon: Shield
           }, {
-            text: "Quick response and support",
-            icon: Clock
+            text: "Affordable pricing",
+            icon: CheckCircle
           }, {
-            text: "Customer-focused service",
+            text: "Customer-focused support",
             icon: Headphones
           }].map(item => <div key={item.text} className="flex items-center gap-3 p-4">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -474,10 +477,10 @@ const Index = () => {
               </h2>
             </div>
             <p className="text-muted-foreground">
-              We provide TV repair services across Vizag City (Visakhapatnam).
+              We provide doorstep TV repair service across Vizag City and nearby localities.
             </p>
             <p className="text-muted-foreground mt-2">
-              Contact us to confirm service availability in your area.
+              We provide doorstep TV repair service only. No walk-in or shop service is available.
             </p>
           </div>
         </div>
@@ -505,9 +508,12 @@ const Index = () => {
                 <MapPin className="w-5 h-5 text-primary" />
                 <span className="text-muted-foreground">Service Area: Vizag City</span>
               </div>
-              <div className="flex items-center justify-center gap-3">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">Working Hours: Monday – Sunday | 9:00 AM – 9:00 PM</span>
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-primary" />
+                  <span className="text-muted-foreground">Mon - Sat: 7:00 AM – 9:00 PM</span>
+                </div>
+                <span className="text-muted-foreground">Sunday: 7:00 AM – 2:00 PM</span>
               </div>
             </div>
             
@@ -530,19 +536,26 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <img src={logo} alt="Vizag TV Repair Expert" className="h-8 w-auto" />
+              <Tv className="w-6 h-6 text-primary" />
+              <span className="font-heading text-lg font-bold text-foreground">Vizag TV Repair Expert</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              © Vizag TV Repair Expert | vizagtvrepairexpert.in
+            <p className="text-sm text-muted-foreground font-medium">
+              Doorstep TV Repair Service in Vizag City
             </p>
             <p className="text-sm text-muted-foreground">
-              Independent TV repair service provider in Vizag City.
+              VizagTVRepairExpert.in offers professional LED, LCD & Smart TV repair services through home service across Vizag City.
+            </p>
+            <p className="text-xs text-muted-foreground italic">
+              VizagTVRepairExpert.in is an independent TV repair service provider. We are not affiliated with or authorized by any TV manufacturing brand.
             </p>
             <div className="flex items-center justify-center gap-4 text-sm">
               <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
               <span className="text-border">|</span>
               <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
             </div>
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Vizag TV Repair Expert | vizagtvrepairexpert.in
+            </p>
           </div>
         </div>
       </footer>
