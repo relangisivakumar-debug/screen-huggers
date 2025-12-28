@@ -1,4 +1,4 @@
-import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu } from "lucide-react";
+import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Headphones, Monitor, Volume2, Lightbulb, Cpu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import tvRepairHero from "@/assets/tv-repair-hero.jpg";
 
@@ -235,6 +235,26 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating Call Button - Bottom Left */}
+      <a 
+        href="tel:7815944046" 
+        className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="Call us"
+      >
+        <Phone className="w-6 h-6 text-white" />
+      </a>
+
+      {/* Floating WhatsApp Button - Bottom Right */}
+      <a 
+        href="https://wa.me/917815944046" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6 text-white" />
+      </a>
     </main>
   );
 };
