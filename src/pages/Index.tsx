@@ -14,6 +14,7 @@ const Index = () => {
             <span className="font-heading text-xl font-semibold text-foreground">Vizag TV Repair Expert</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
+            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
             <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
