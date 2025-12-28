@@ -115,7 +115,7 @@ const Index = () => {
                 <Info className="w-6 h-6 text-primary-foreground" />
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                About Vizag TV Repair Expert
+                About Us
               </h2>
             </div>
             <div className="space-y-4 text-muted-foreground text-center">
@@ -346,7 +346,7 @@ const Index = () => {
             <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
               <Award className="w-6 h-6 text-primary-foreground" />
             </div>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Our Achievements</h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Our Track Record</h2>
           </div>
           
           <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -645,6 +645,9 @@ const Index = () => {
                 </p>
                 <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-2">
                   <Clock className="w-4 h-4" /> Mon-Sat: 7AM-9PM
+                </p>
+                <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-2">
+                  <Clock className="w-4 h-4" /> Sun: 7AM-2PM
                 </p>
               </div>
             </div>
