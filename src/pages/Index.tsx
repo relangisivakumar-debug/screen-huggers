@@ -2,7 +2,11 @@ import { Tv, Clock, Shield, Wrench, Phone, MapPin, Users, CheckCircle, Zap, Head
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import tvRepairHero from "@/assets/tv-repair-hero.jpg";
+import heroTechnician from "@/assets/hero-technician.webp";
+import ledTvRepair from "@/assets/led-tv-repair.webp";
+import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
+import smartTvRepair from "@/assets/smart-tv-repair.jpg";
+import plasmaTvRepair from "@/assets/plasma-tv-repair.webp";
 
 const Index = () => {
   return (
@@ -65,8 +69,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <div className="order-first md:order-none">
               <img 
-                src={tvRepairHero} 
-                alt="Professional TV repair technician fixing LED TV" 
+                src={heroTechnician} 
+                alt="Professional TV repair technician in red shirt fixing LED TV" 
                 className="rounded-2xl shadow-lg w-full"
                 loading="eager"
                 decoding="async"
@@ -128,15 +132,64 @@ const Index = () => {
             We provide complete TV repair solutions, including:
           </p>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              { name: "LED TV Repair", icon: Monitor },
-              { name: "LCD TV Repair", icon: Tv },
-              { name: "Smart TV Repair", icon: Zap },
+              { 
+                name: "LED TV Repair", 
+                icon: Monitor, 
+                image: ledTvRepair,
+                description: "Expert repair for all LED TV brands including Samsung, LG, Sony, and more."
+              },
+              { 
+                name: "LCD TV Repair", 
+                icon: Tv, 
+                image: lcdTvRepair,
+                description: "Professional LCD panel diagnostics and repair services at affordable rates."
+              },
+              { 
+                name: "Smart TV Repair", 
+                icon: Zap, 
+                image: smartTvRepair,
+                description: "Fix software issues, connectivity problems, and hardware faults in Smart TVs."
+              },
+              { 
+                name: "Plasma TV Repair", 
+                icon: Lightbulb, 
+                image: plasmaTvRepair,
+                description: "Specialized plasma TV repair including power board and display issues."
+              },
+            ].map((service) => (
+              <div 
+                key={service.name}
+                className="rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300 overflow-hidden group"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <service.icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="font-medium text-foreground">{service.name}</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Additional Services List */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mt-8">
+            {[
               { name: "TV Not Powering On", icon: Lightbulb },
               { name: "Screen & Display Issues", icon: Monitor },
               { name: "Sound Problems", icon: Volume2 },
-              { name: "Backlight Repair", icon: Lightbulb },
               { name: "Motherboard Repair", icon: Cpu },
             ].map((service) => (
               <div 
