@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
 import heroTechnician from "@/assets/hero-technician-clean.png";
 import ledTvRepair from "@/assets/led-tv-repair.webp";
 import lcdTvRepair from "@/assets/lcd-tv-repair.jpg";
@@ -94,7 +93,7 @@ const Index = () => {
               <div className="text-left mb-8 space-y-2">
                 <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> LED, LCD & Smart TV Repair</p>
                 <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> Home Service Available</p>
-                <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> No Walk-In / No Shop Visit</p>
+                
                 <p className="text-muted-foreground flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> Experienced Technicians</p>
               </div>
               
@@ -364,7 +363,7 @@ const Index = () => {
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <UserCheck className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-2">5000+</h3>
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-2">10000+</h3>
               <p className="text-muted-foreground">Happy Customers</p>
             </div>
             <div className="text-center p-6 bg-background rounded-2xl border border-border">
@@ -391,9 +390,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="bg-card border border-border rounded-2xl p-6">
               <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
               </div>
               <p className="text-muted-foreground mb-4 italic">
                 "Excellent service! My LED TV had power issues and they fixed it the same day at my doorstep. Very professional technician and reasonable pricing. Highly recommended for TV repair in Vizag."
@@ -411,9 +408,7 @@ const Index = () => {
             
             <div className="bg-card border border-border rounded-2xl p-6">
               <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
               </div>
               <p className="text-muted-foreground mb-4 italic">
                 "My Smart TV had display lines and I was worried it needed panel replacement. But the technician diagnosed it properly and fixed the T-con board issue at a very affordable cost. Great work!"
@@ -486,9 +481,7 @@ const Index = () => {
             <p className="text-muted-foreground">
               We provide doorstep TV repair service across Vizag City and nearby localities.
             </p>
-            <p className="text-muted-foreground mt-2">
-              We provide doorstep TV repair service only. No walk-in or shop service is available.
-            </p>
+            
           </div>
         </div>
       </section>
